@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Elementos Naturales y Mapa del Parque</title>
+
+    <style>
+        /* CSS para posicionamiento de imágenes */
+        .img-izquierda {
+            float: left;
+            margin-right: 15px;
+            width: 40%;
+        }
+
+        .img-derecha {
+            float: right;
+            margin-left: 15px;
+            width: 40%;
+        }
+
+        .img-centrada {
+            display: block;
+            margin: 0px auto;
+            width: 60%;
+        }
+
+        .alinear-izquierda {
+            text-align: left;
+        }
+
+        .alinear-centrado {
+            text-align: center;
+        }
+
+        .alinear-derecha {
+            text-align: right;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Menú de navegación interna con atributos de accesibilidad -->
+    <nav role="navigation" aria-label="Menú de navegación principal">
+        <!-- Lista de enlaces de navegación interna -->
+        <ul>
+            <li><a href="#introduccion" aria-label="Ir a la sección de introducción">Introducción</a></li>
+            <li><a href="#elementos-naturales" aria-label="Ir a la sección de elementos naturales comunes" >Elementos Naturales Comunes</a></li>
+            <li><a href="#tipos-de-elementos" aria-label="Ir a la sección de categorías de elementos naturales">Categorías de Elementos Naturales</a></li>
+            <li><a href="#mapa-parque" aria-label="Ir a la sección del mapa interactivo">Mapa Interactivo</a></li>
+        </ul>
+    </nav>
+
+    <h1 id="introduccion">Elementos Naturales en un Parque</h1>
+
+    <!-- Imagen con atributos de accesibilidad -->
+    <img src="parque.jpg" alt="Vista de un parque con árboles y flores en primavera" style="width: 60%; max-width: 600px;" 
+         aria-describedby="descripcion-parque"/>
+
+    <p id="descripcion-parque">La imagen muestra un paisaje de parque con árboles, flores y un ambiente natural durante la primavera.</p>
+    
+    <!-- El atributo alt es esencial para la accesibilidad web, ya que proporciona una descripción de las imágenes para usuarios con discapacidades visuales. 
+         Los lectores de pantalla leen el texto del atributo alt, permitiendo que las personas con discapacidad visual comprendan el contenido de la imagen. 
+         Además, el uso adecuado de alt mejora la experiencia de usuario al ofrecer información alternativa en caso de que la imagen no pueda ser cargada. -->
+
+    <!-- Inserción del video introductorio -->
+    <h2>Video Introductorio del Parque</h2>
+    <video src="Parques nacionales Imprescindibles.mp4" controls style="width: 100%; max-width: 600px;" 
+           aria-label="Video introductorio sobre parques nacionales">
+        <!-- Inserción de subtítulos con <track> -->
+        <track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español" default>
+        <!-- Mensaje alternativo en caso de que el video no se cargue -->
+        Tu navegador no soporta la reproducción de videos. Por favor, actualiza tu navegador.
+    </video>
+    <!-- Comentario: Los subtítulos son esenciales para garantizar la accesibilidad del contenido a personas con discapacidades auditivas o que prefieran leer en otro idioma. -->
+    
+    <!-- Inserción del audio de ambiente -->
+     
+    <h2>Audio de Sonidos del Parque</h2>
+    <audio src="PARQUE CON SONIDO DE PÁJAROS.mp3" controls aria-label="Audio de sonidos del parque con pájaros">
+        <!-- Mensaje alternativo en caso de que el audio no se cargue -->
+        Tu navegador no soporta la reproducción de audios. Por favor, actualiza tu navegador.
+    </audio>
+
+    <!-- Imagen alineada a la izquierda con descripción asociada -->
+    <div class="contenedor">
+      <img src="arboles.jpg" alt="Árboles frondosos en un parque durante el verano" class="img-izquierda" 
+       aria-describedby="descripcion-arboles">
+
+      <p class="alinear-izquierda">Explora las maravillas naturales que nuestro parque ofrece,
+         desde impresionantes bosques hasta áreas para el descanso familiar.</p>
+    </div>
+
+    <!-- Comentario: Los archivos de audio ayudan a mejorar la inmersión del usuario, creando una experiencia más realista al explorar el contenido del parque. -->
+
+    <div style="clear: left;">
+    <p>Un parque es un lugar donde podemos encontrar una gran diversidad de elementos naturales. A continuación, se muestran algunas listas ordenadas y no ordenadas para organizar estos elementos.</p>
+
+     <!-- Lista No Ordenada: Elementos naturales comunes que se pueden encontrar en un parque -->
+     <h2 id="elementos-naturales">Elementos Naturales Comunes en un Parque</h2>
+     <ul>
+         <li>Árboles</li>
+         <li>Flores</li>
+         <li>Aves</li>
+         <li>Insectos</li>
+         <li>Arbustos</li>
+     </ul>
+     <!-- Comentario: Esta lista no ordenada contiene elementos naturales comunes en un parque. 
+          El orden no es importante, solo estamos listando algunos de los elementos más comunes. -->
+ 
+     <!-- Lista Ordenada: Clasificación de elementos naturales en el parque -->
+
+     <h2 id="tipos-de-elementos">Categorías de Elementos Naturales en el Parque</h2>
+     <ol>
+         <li>Tipos de Árboles
+             <ul>
+                 <!-- Lista Anidada: Tipos de árboles comunes en el parque -->
+                 <li>Robles</li>
+                 <li>Pinos</li>
+                 <li>Encinas</li>
+             </ul>
+         </li>
+         <li>Tipos de Flores
+
+             <ul>
+                 <!-- Lista Anidada: Tipos de flores comunes en el parque -->
+                 <li>Rosales</li>
+                 <li>Adelfas</li>
+                 <li>Jazmines</li>
+             </ul>
+         </li>
+         <li>Tipos de Animales
+             <ul>
+                 <!-- Lista Anidada: Subcategorías de animales que podemos encontrar en el parque -->
+                 <li>Aves</li>
+                 <li>Insectos</li>
+                 <li>Mamíferos</li>
+             </ul>
+         </li>
+     </ol>
+    </div>
+
+    <!-- Comentario: Esta lista ordenada clasifica los elementos naturales en el parque en tres categorías principales: 
+          Tipos de árboles, flores y animales. Cada categoría tiene una lista anidada para dar detalles adicionales. -->
+
+    <!-- Las clases img-izquierda, img-derecha, y img-centrada permiten un posicionamiento claro y atractivo en la página. 
+         El atributo aria-label proporciona una descripción accesible para usuarios con lectores de pantalla. -->
+
+    <!-- Imagen centrada con descripción asociada -->
+    <div class="contenedor">
+      <img src="flores.jpg" alt="Flores de colores en primavera" class="img-centrada" 
+      aria-describedby="descripcion-flores">
+
+       <p class="alinear-centrado">Las flores coloridas crean un entorno vibrante y lleno de vida en primavera. 
+          Perfecto para los amantes de la fotografía y la naturaleza.</p>
+    </div>
+
+    <!-- Mapa Interactivo con áreas descriptivas -->
+    <h2 id="mapa-parque">Mapa Interactivo del Parque</h2>
+    <img src="mapa_parque.gif" alt="Mapa del parque con rutas de senderismo" usemap="#mapa_parque" style="width: 100%; max-width: 500px;" />
+
+         <!-- Definición del mapa interactivo -->
+    <map name="mapa_parque">
+        <area shape="rect" coords="50,50,200,150" href="ruta-rectangular.html" alt="Ruta Rectangular" title="Ruta A: Sendero principal" />
+        <area shape="circle" coords="300,120,50" href="ruta-circular.html" alt="Ruta Circular" title="Ruta B: Sendero del lago" />
+        <area shape="poly" coords="400,200,439,250,400,300,350,250" href="ruta-poligonal.html" alt="Ruta Poligonal" title="Ruta C: Sendero de montaña" />
+
+    </map>
+
+    <!-- Descripción de las rutas -->
+    <h3 id="ruta-rectangular">Ruta A: Sendero Principal</h3>
+    <p>Esta ruta atraviesa el corazón del parque, ideal para paseos familiares y observación de la naturaleza. <a href="ruta-rectangular.html">Más información sobre la Ruta A</a>.</p>
+
+    <h3 id="ruta-circular">Ruta B: Sendero del Lago</h3>
+    <p>Rodea el lago central, ofreciendo vistas impresionantes y áreas de descanso con bancos. <a href="ruta-circular.html">Más información sobre la Ruta B</a>.</p>
+
+    <h3 id="ruta-poligonal">Ruta C: Sendero de Montaña</h3>
+    <p>Ruta desafiante que asciende hasta la cima de la montaña, perfecta para los amantes del senderismo. <a href="ruta-poligonal.html">Más información sobre la Ruta C</a>.</p>
+
+    <!-- Imagen alineada a la derecha con descripción asociada -->
+    <div class="contenedor">
+        <img src="sendero.jpg" alt="Un sendero rodeado de naturaleza" class="img-derecha" 
+         aria-describedby="descripcion-sendero">
+
+        <p class="alinear-derecha">El sendero del parque ofrece una experiencia inmersiva, ideal para caminatas y momentos de reflexión personal.</p>
+    </div>
+
+    <!-- Enlaces Externos con descripciones claras -->
+    <div style="clear: right;">
+    <h2>Enlaces Relacionados con Parques Nacionales</h2>
+    <ul>
+        <li><a href="https://www.miteco.gob.es/es/parques-nacionales-oapn/red-parques-nacionales/parques-nacionales.html" target="_blank" 
+               aria-label="Visitar la página oficial de Parques Nacionales de España">Página oficial de Parques Nacionales de España</a></li>
+
+        <li><a href="https://es.wikipedia.org/wiki/Parques_nacionales_de_Espa%C3%B1a" target="_blank" 
+               aria-label="Ir a la página de Wikipedia sobre Parques Nacionales">Wikipedia - Parques Nacionales</a></li>
+
+        <li><a href="https://www.wwf.es/campanas/" target="_blank" 
+               aria-label="Ir a la página del World Wildlife Fund sobre campañas de protección de la naturaleza">World Wildlife Fund - Protege a la naturaleza</a></li>
+    </ul>
+    </div>
+    <!-- Comentario: Estos enlaces externos proporcionan acceso a sitios oficiales e informativos sobre parques nacionales 
+         y la conservación de la naturaleza. El atributo target="_blank" asegura que los enlaces se abran en una nueva pestaña. -->
+
+    <footer>
+        <p>&copy; 2024 Daniel Marchena - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
